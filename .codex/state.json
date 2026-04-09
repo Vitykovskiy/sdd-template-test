@@ -1,8 +1,8 @@
 {
-  "mode": "initialization",
+  "mode": "issue_driven",
   "state_version": 1,
   "project": {
-    "gh_project_url": null,
-    "gh_project_id": null
+    "gh_project_url": "https://github.com/users/Vitykovskiy/projects/42",
+    "gh_project_id": "PVT_kwHOBBe0Kc4BULsS"
   }
 }

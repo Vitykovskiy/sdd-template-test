@@ -451,6 +451,7 @@ PROJECT_STATUS_COLOR_MAP = {
     "fbca04": "YELLOW",
     "f9d0c4": "ORANGE",
     "5319e7": "PURPLE",
+    "a371f7": "PURPLE",
     "0052cc": "BLUE",
     "1d76db": "BLUE",
     "d93f0b": "RED",
