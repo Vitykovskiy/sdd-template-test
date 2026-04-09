@@ -1,0 +1,31 @@
+name: Ensure Issue Project Link
+
+on:
+  issues:
+    types:
+      - opened
+      - reopened
+      - closed
+
+permissions:
+  contents: read
+  issues: read
+  repository-projects: write
+
+jobs:
+  ensure-issue-project-link:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Ensure Issue Project Link
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python .codex/routing/_shared/scripts/ensure_issue_project_link.py \
+            --repository "${{ github.repository }}" \
+            --issue-number "${{ github.event.issue.number }}"
